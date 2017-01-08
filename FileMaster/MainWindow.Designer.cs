@@ -40,22 +40,24 @@
             // 
             // SelectRepBtn
             // 
-            this.SelectRepBtn.Location = new System.Drawing.Point(14, 12);
+            this.SelectRepBtn.Location = new System.Drawing.Point(9, 3);
             this.SelectRepBtn.Name = "SelectRepBtn";
-            this.SelectRepBtn.Size = new System.Drawing.Size(200, 85);
+            this.SelectRepBtn.Size = new System.Drawing.Size(141, 29);
             this.SelectRepBtn.TabIndex = 0;
-            this.SelectRepBtn.Text = "Sélectionner répertoire";
+            this.SelectRepBtn.Text = "Sélection du répertoire";
             this.SelectRepBtn.UseVisualStyleBackColor = true;
             this.SelectRepBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // ClasserBtn
             // 
-            this.ClasserBtn.Location = new System.Drawing.Point(263, 79);
+            this.ClasserBtn.Enabled = false;
+            this.ClasserBtn.Location = new System.Drawing.Point(172, 12);
             this.ClasserBtn.Name = "ClasserBtn";
-            this.ClasserBtn.Size = new System.Drawing.Size(200, 85);
-            this.ClasserBtn.TabIndex = 1;
+            this.ClasserBtn.Size = new System.Drawing.Size(97, 37);
+            this.ClasserBtn.TabIndex = 2;
             this.ClasserBtn.Text = "Classer";
             this.ClasserBtn.UseVisualStyleBackColor = true;
+            this.ClasserBtn.Click += new System.EventHandler(this.ClasserBtn_Click);
             // 
             // panel1
             // 
@@ -63,16 +65,17 @@
             this.panel1.Controls.Add(this.SelectRepBtn);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 204);
+            this.panel1.Size = new System.Drawing.Size(283, 103);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ClasserBtn);
             this.panel2.Controls.Add(this.DropDownLabel);
             this.panel2.Controls.Add(this.ExtensionComboBox);
-            this.panel2.Location = new System.Drawing.Point(14, 120);
+            this.panel2.Location = new System.Drawing.Point(3, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 69);
+            this.panel2.Size = new System.Drawing.Size(275, 57);
             this.panel2.TabIndex = 5;
             // 
             // DropDownLabel
@@ -86,20 +89,21 @@
             // 
             // ExtensionComboBox
             // 
+            this.ExtensionComboBox.Enabled = false;
             this.ExtensionComboBox.FormattingEnabled = true;
             this.ExtensionComboBox.Location = new System.Drawing.Point(6, 28);
             this.ExtensionComboBox.Name = "ExtensionComboBox";
-            this.ExtensionComboBox.Size = new System.Drawing.Size(194, 21);
-            this.ExtensionComboBox.TabIndex = 3;
+            this.ExtensionComboBox.Size = new System.Drawing.Size(151, 21);
+            this.ExtensionComboBox.TabIndex = 1;
             this.ExtensionComboBox.SelectedIndexChanged += new System.EventHandler(this.button1_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 229);
-            this.Controls.Add(this.ClasserBtn);
+            this.ClientSize = new System.Drawing.Size(305, 121);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "FileMaster";
             this.panel1.ResumeLayout(false);

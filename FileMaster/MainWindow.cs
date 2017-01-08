@@ -26,22 +26,30 @@ namespace FileMaster
 
             if (!(string.IsNullOrWhiteSpace(fbd.SelectedPath)))
             {
+                ExtensionComboBox.Items.Clear();
+
                 string[] files = Directory.GetFiles(fbd.SelectedPath);
-                string[] fileExtensions=files;
 
                 for (int i = 0; i < files.Length; i++)
                 {
-                    files[i] = Path.GetFileName(files[i]);
-                    fileExtensions[i] = Path.GetExtension(files[i]);
+                    files[i] = Path.GetExtension(files[i]);
 
-                    if (!(ExtensionComboBox.Items.Contains(fileExtensions[i])))
+                    if (!(ExtensionComboBox.Items.Contains(files[i])))
                     {
-                        ExtensionComboBox.Items.Add(fileExtensions[i]);
+                        ExtensionComboBox.Items.Add(files[i]);
                     }
                 }
 
-                MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
-                MessageBox.Show("Path: " + fbd.SelectedPath);
+                ExtensionComboBox.Enabled = true;
+                ClasserBtn.Enabled = true;
+            }
+        }
+
+        private void ClasserBtn_Click(object sender, EventArgs e)
+        {
+            if (!(ExtensionComboBox.Items.Contains(ExtensionComboBox.Text)))
+            {
+                MessageBox.Show("Extension invalide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
