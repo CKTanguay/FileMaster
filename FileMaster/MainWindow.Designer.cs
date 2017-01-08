@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.SelectRepBtn = new System.Windows.Forms.Button();
             this.ClasserBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -95,7 +96,6 @@
             this.ExtensionComboBox.Name = "ExtensionComboBox";
             this.ExtensionComboBox.Size = new System.Drawing.Size(151, 21);
             this.ExtensionComboBox.TabIndex = 1;
-            this.ExtensionComboBox.SelectedIndexChanged += new System.EventHandler(this.button1_Click);
             // 
             // MainWindow
             // 
@@ -103,8 +103,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 121);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FileMaster";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
